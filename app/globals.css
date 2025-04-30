@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Черно-белая палитра */
+  --foreground: 0, 0, 0; /* Черный для текста */
+  --background: 255, 255, 255; /* Белый для фона */
+  --muted: 243, 243, 243; /* Светло-серый для выделения блоков */
+  --border: 229, 229, 229; /* Серый для рамок */
+  --primary: 0, 0, 0; /* Черный для акцентов */
+  --secondary: 102, 102, 102; /* Темно-серый для второстепенного текста */
+  --accent: 51, 51, 51; /* Средне-серый для акцентов */
+}
+
+@layer base {
+  /* Базовые стили для всего сайта */
+  body {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Типографика */
+  h1 {
+    @apply text-4xl font-bold leading-tight tracking-tighter mb-4;
+  }
+  
+  h2 {
+    @apply text-3xl font-semibold leading-tight tracking-tight mt-10 mb-4;
+  }
+  
+  h3 {
+    @apply text-2xl font-medium leading-normal mt-8 mb-3;
+  }
+  
+  h4 {
+    @apply text-xl font-medium leading-normal mt-6 mb-2;
+  }
+  
+  p {
+    @apply leading-relaxed mb-6;
+  }
+  
+  a {
+    @apply font-medium underline underline-offset-4 decoration-2 decoration-border hover:decoration-accent transition-all;
+  }
+  
+  ul, ol {
+    @apply pl-6 mb-6;
+  }
+  
+  ul {
+    @apply list-disc;
+  }
+  
+  ol {
+    @apply list-decimal;
+  }
+  
+  blockquote {
+    @apply pl-4 border-l-4 border-border italic my-6;
+  }
+  
+  hr {
+    @apply my-8 border-border;
+  }
+  
+  img {
+    @apply rounded-lg;
+  }
+  
+  code {
+    @apply font-mono text-sm bg-muted px-1.5 py-0.5 rounded;
+  }
+  
+  pre {
+    @apply font-mono text-sm bg-muted p-4 rounded-lg overflow-x-auto my-6;
+  }
+}
+
+@layer components {
+  /* Контейнеры и блоки */
+  .container {
+    @apply max-w-4xl;
+  }
+  
+  .prose {
+    @apply max-w-none;
+  }
+  
+  .card {
+    @apply border border-border rounded-lg p-6 transition-all hover:shadow-sm;
+  }
+  
+  .button {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm no-underline transition-all;
+  }
+  
+  .button-primary {
+    @apply bg-primary text-white hover:bg-accent;
+  }
+  
+  .button-secondary {
+    @apply bg-muted text-foreground hover:bg-border;
+  }
+}
+
+/* Специальные стили */
+.dot-pattern {
+  background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
