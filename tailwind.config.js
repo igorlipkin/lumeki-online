@@ -1,67 +1,82 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-mono)', 'monospace'],
-      },
       colors: {
-        // Строго черно-белая палитра с оттенками серого
-        'foreground': '#000000',
-        'background': '#ffffff',
-        'primary': '#000000',
-        'secondary': '#666666',
-        'accent': '#333333',
-        'muted': '#f3f3f3',
-        'border': '#e5e5e5',
+        // Строго черно-белая палитра
+        primary: '#000000',
+        secondary: '#ffffff',
+        // Оттенки серого для UI элементов
+        gray: {
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#d4d4d4',
+          400: '#a3a3a3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
+        }
       },
       typography: {
         DEFAULT: {
           css: {
-            'code::before': {
-              content: '""',
+            color: '#000000',
+            a: {
+              color: '#000000',
+              '&:hover': {
+                color: '#404040',
+              },
+              textDecoration: 'underline',
             },
-            'code::after': {
-              content: '""',
-            },
-            'blockquote p:first-of-type::before': {
-              content: '""',
-            },
-            'blockquote p:last-of-type::after': {
-              content: '""',
-            },
-            img: {
-              marginTop: '0',
-              marginBottom: '0',
+            strong: {
+              color: '#000000',
+              fontWeight: '700',
             },
             h1: {
+              color: '#000000',
               fontWeight: '700',
             },
             h2: {
+              color: '#000000',
               fontWeight: '600',
             },
             h3: {
-              fontWeight: '500',
+              color: '#000000',
+              fontWeight: '600',
+            },
+            h4: {
+              color: '#000000',
+              fontWeight: '600',
+            },
+            blockquote: {
+              color: '#404040',
+              borderLeftColor: '#e5e5e5',
             },
             code: {
               color: '#000000',
-              backgroundColor: '#f3f3f3',
-              borderRadius: '4px',
-              padding: '2px 4px',
+              backgroundColor: '#f5f5f5',
+            },
+            pre: {
+              backgroundColor: '#f5f5f5',
+              color: '#000000',
             },
           },
         },
       },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+      },
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    require('tailwindcss-animate'),
+    require('@tailwindcss/typography')
   ],
-};
+}
