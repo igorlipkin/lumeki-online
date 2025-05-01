@@ -1,120 +1,98 @@
-# Lumeki.online - Блог об ИИ
+# Lumeki Online - AI Integration Blog
 
-Минималистичный блог о практическом применении искусственного интеллекта в повседневной жизни и работе. Создан с использованием Next.js и размещен на Vercel.
+A minimal, elegant blog about AI integration built with Next.js and hosted on Vercel.
 
-## 🚀 Быстрый старт
+## Features
 
-### Разработка локально
+- Clean, minimalist black and white design inspired by Apple/Medium/Stripe
+- Fast and SEO-friendly thanks to Next.js 13 App Router
+- MDX content for rich, interactive blog posts
+- Mobile-first responsive design
+- Easy to edit from an iPhone with remote GitHub editing
+- Fully customizable with Tailwind CSS
 
-1. Клонируйте репозиторий:
+## Getting Started
+
+### Prerequisites
+
+- Node.js 16.8.0 or later
+- Git
+
+### Installation
+
+1. Clone this repository:
 ```bash
 git clone https://github.com/igorlipkin/lumeki-online.git
 cd lumeki-online
 ```
 
-2. Установите зависимости:
+2. Install dependencies:
 ```bash
 npm install
-# или
-yarn install
-# или
-pnpm install
 ```
 
-3. Запустите сервер разработки:
+3. Run the development server:
 ```bash
 npm run dev
-# или
-yarn dev
-# или
-pnpm dev
 ```
 
-4. Откройте [http://localhost:3000](http://localhost:3000) в вашем браузере.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-### Деплой на Vercel
+## Content Management
 
-#### Вариант 1: Через GitHub
-1. Создайте аккаунт на [Vercel](https://vercel.com/) (если еще не создали)
-2. Подключите ваш GitHub аккаунт
-3. Импортируйте проект из репозитория
-4. Следуйте инструкциям мастера установки
-5. Укажите ваш домен (lumeki.online) в настройках проекта
+### Adding Blog Posts
 
-#### Вариант 2: Через Vercel CLI
-1. Установите Vercel CLI:
-```bash
-npm i -g vercel
-```
-
-2. Войдите в аккаунт:
-```bash
-vercel login
-```
-
-3. Разверните проект:
-```bash
-vercel
-```
-
-## 📝 Создание контента
-
-### Добавление новых статей
-
-1. Создайте новый файл .mdx в директории `content/posts/`
-2. Добавьте frontmatter в начале файла:
-```
+1. Create a new MDX file in the `content/posts` directory
+2. Add frontmatter at the top of the file:
+```mdx
 ---
-title: "Название статьи"
-date: "ГГГГ-ММ-ДД"
-author: "Имя автора"
-description: "Краткое описание статьи"
-tags: ["тег1", "тег2"]
+title: 'Your Post Title'
+excerpt: 'A brief summary of your post'
+date: '2023-05-15'
+author: 'Your Name'
+categories: ['Category 1', 'Category 2']
 ---
+
+Your content here...
 ```
 
-3. Напишите содержимое статьи в формате Markdown
+3. Write your content using Markdown/MDX syntax
+4. The post will automatically appear in the blog listing
 
-### Работа с содержимым через iPhone
+### Editing from iPhone
 
-Рекомендуемые опции для редактирования с iPhone:
+You can edit your blog directly from your iPhone using:
 
-1. **GitHub Mobile** - прямое редактирование репозитория
-2. **Working Copy** - Git клиент для iOS
-3. **iA Writer** + GitHub интеграция
-4. **Forestry.io** или другая headless CMS
+1. **GitHub Mobile App** - Edit files directly from the GitHub mobile app
+2. **Working Copy** - A Git client for iOS that allows you to clone, edit, and push changes
+3. **iSH** - A Linux shell for iOS that can run Git
 
-## 🧱 Структура проекта
+## Deployment
 
-```
-lumeki-online/
-├── app/                  # Страницы приложения (Next.js App Router)
-├── components/           # React компоненты
-├── content/              # MDX контент (статьи)
-├── lib/                  # Утилиты и вспомогательные функции
-├── public/               # Статические файлы
-└── styles/               # CSS стили
-```
+### Deploying to Vercel
 
-## 📦 Используемые технологии
+1. Push your changes to your GitHub repository
+2. Connect your repository to Vercel
+3. Vercel will automatically deploy changes when you push to the main branch
 
-- [Next.js](https://nextjs.org/) - React фреймворк
-- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS фреймворк
-- [MDX](https://mdxjs.com/) - Markdown + JSX для контента
-- [Vercel](https://vercel.com/) - Платформа для хостинга
+### Custom Domain
 
-## 🤝 Как внести вклад
+1. Add your domain in the Vercel dashboard
+2. Update DNS settings as directed by Vercel
+3. Set up HTTPS (automatically handled by Vercel)
 
-1. Форкните репозиторий
-2. Создайте ветку для вашей фичи (`git checkout -b feature/amazing-feature`)
-3. Зафиксируйте изменения (`git commit -m 'Добавить новую фичу'`)
-4. Отправьте ветку (`git push origin feature/amazing-feature`)
-5. Откройте Pull Request
+## Future Improvements
 
-## 📃 Лицензия
+- Add a newsletter subscription system
+- Implement a commenting system
+- Add analytics
+- Create a search function
+- Set up social sharing previews
 
-Распространяется под лицензией MIT. См. файл `LICENSE` для получения дополнительной информации.
+## License
 
-## 📞 Контакты
+This project is open source and available under the [MIT License](LICENSE).
 
-Email: yo@lumeki.online
+## Contact
+
+For questions or feedback, reach out to [yo@lumeki.online](mailto:yo@lumeki.online).
